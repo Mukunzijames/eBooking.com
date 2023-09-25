@@ -10,7 +10,7 @@ function App() {
     if(!newItem){
     alert("enter new item.")
     return;
-    }
+    } 
 
    const items = {
     id: Math.floor(Math.random() * 5000),

@@ -1,29 +1,16 @@
-import React, { useState } from "react"
-import ContactCard from "./contactCard"
+import React from "react"
+import FetchApi from "./component/FetchApi";
+
+
+
 const App= () =>{
 
-
-const [contacts, setContacts] = useState([]);
-fetch("https://randomuser.me/api/?results=3")
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-  });
 return (
-<>
-{contacts.map(contact =>  (
-  <ContactCard
-  avatar={contact.picture.large}
-  name={contact.name.first + " " + contact.name.last}
-  email={contact.email}
-  age={contact.dob.age}
-/>
-))}
+<div className="App">
 
+   <FetchApi />
 
-
-
-</>
+</div>
 
   
 )
